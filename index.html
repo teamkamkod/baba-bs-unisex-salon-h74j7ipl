@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BABA BS Unisex SALON | Barber Shop & Beauty Salon in New Delhi</title>
+<meta name="description" content="BABA BS Unisex SALON in Jamia Nagar, New Delhi. Rated 4.8★ by 320+ clients. Haircuts, colouring & beauty services. Open daily 10 AM–10 PM. Call +91 98995 96045.">
+<meta name="keywords" content="barber shop New Delhi, unisex salon Delhi, haircut for men Delhi, haircut for women Delhi, beard trim Delhi, bridal makeup Delhi, facial Delhi, manicure pedicure Delhi">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #F7A8A0;
+    --secondary: #B79CED;
+    --background: #FFF9F2;
+    --text: #3D2C3A;
+    --cta: #5BC8A8;
+    --font-heading: 'Fredoka', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
+    --radius: 9999px;
+    --radius-card: 24px;
+    --spacing-section: 100px;
+    --spacing-section-mobile: 64px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── CTA BUTTON ── */
+  .cta {
+    display: inline-block;
+    background: var(--cta);
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 36px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    box-shadow: 0 4px 18px rgba(91,200,168,0.25);
+    text-align: center;
+  }
+  .cta:hover {
+    background: #3db892;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(91,200,168,0.35);
+  }
+  .cta-outline {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 13px 34px;
+    border-radius: var(--radius);
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s, transform 0.2s;
+    text-align: center;
+  }
+  .cta-outline:hover {
+    background: #fff;
+    color: var(--text);
+    transform: translateY(-2px);
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    background: rgba(183,156,237,0.12);
+    padding: 6px 18px;
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+  }
+
+  .section-heading {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .section-subtext {
+    font-size: 1.05rem;
+    color: #7a6278;
+    max-width: 620px;
+    margin: 0 auto 48px;
+  }
+
+  .text-center { text-align: center; }
+
+  /* ── FADE-IN ANIMATION ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ══════════════════════════════════════
+     NAVIGATION
+  ══════════════════════════════════════ */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255,249,242,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(247,168,160,0.2);
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .nav-logo span { color: var(--primary); }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  nav ul li a {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    transition: background 0.2s, color 0.2s;
+  }
+  nav ul li a:hover {
+    background: rgba(247,168,160,0.15);
+    color: var(--primary);
+  }
+
+  nav ul li a.cta {
+    padding: 10px 22px;
+    font-size: 0.88rem;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .burger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .burger.active span:nth-child(2) { opacity: 0; }
+  .burger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+  @media (max-width: 767px) {
+    .burger { display: flex; }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: rgba(255,249,242,0.98);
+      backdrop-filter: blur(10px);
+      padding: 20px 24px 28px;
+      gap: 4px;
+      border-bottom: 1px solid rgba(247,168,160,0.2);
+      box-shadow: 0 8px 32px rgba(61,44,58,0.08);
+    }
+
+    nav ul.open {
+      display: flex;
+    }
+
+    nav ul li { width: 100%; }
+    nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 1rem;
+    }
+    nav ul li a.cta {
+      margin-top: 8px;
+      text-align: center;
+      padding: 13px 16px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    nav ul {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      background: none;
+      backdrop-filter: none;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  /* ══════════════════════════════════════
+     HERO
+  ══════════════════════════════════════ */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(61,44,58,0.62) 0%, rgba(61,44,58,0.45) 60%, rgba(183,156,237,0.25) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 120px 24px 80px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: var(--radius);
+    margin-bottom: 28px;
+  }
+
+  .hero-badge .stars { color: #FFD166; letter-spacing: 1px; }
+
+  .hero-content h1 {
+    font-size: clamp(2.4rem, 7vw, 4.2rem);
+    color: #fff;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+
+  .hero-content .hero-sub {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .hero-content .hero-text {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.82);
+    max-width: 580px;
+    margin: 0 auto 40px;
+    line-height: 1.75;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ══════════════════════════════════════
+     ABOUT
+  ══════════════════════════════════════ */
+  #about {
+    padding: var(--spacing-section-mobile) 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    #about { padding: var(--spacing-section) 40px; }
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .about-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+  }
+
+  .about-image-wrap {
+    position: relative;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: 0 16px 56px rgba(61,44,58,0.12);
+  }
+
+  .about-image-wrap img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: var(--radius-card);
+    transition: transform 0.5s ease;
+  }
+  .about-image-wrap:hover img { transform: scale(1.03); }
+
+  .about-rating-pill {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 20px rgba(61,44,58,0.15);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .about-rating-pill .stars { color: #FFD166; }
+
+  .about-text { }
+  .about-text p {
+    font-size: 1.05rem;
+    color: #5a4558;
+    line-height: 1.85;
+    margin-bottom: 28px;
+  }
+
+  .about-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .chip {
+    background: rgba(247,168,160,0.15);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(247,168,160,0.3);
+  }
+
+  /* ══════════════════════════════════════
+     FEATURED MENU / SERVICES
+  ══════════════════════════════════════ */
+  #services {
+    padding: var(--spacing-section-mobile) 24px;
+    background: linear-gradient(135deg, rgba(247,168,160,0.08) 0%, rgba(183,156,237,0.08) 100%);
+  }
+
+  @media (min-width: 768px) {
+    #services { padding: var(--spacing-section) 40px; }
+  }
+
+  .services-inner { max-width: 1100px; margin: 0 auto; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: 600px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .service-card {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 36px 28px;
+    box-shadow: 0 4px 24px rgba(61,44,58,0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(61,44,58,0.12);
+  }
+
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, rgba(247,168,160,0.2), rgba(183,156,237,0.2));
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+    color: #7a6278;
+    line-height: 1.65;
+  }
+
+  .services-cta-wrap { text-align: center; }
+
+  /* ══════════════════════════════════════
+     CUSTOMER REVIEWS
+  ══════════════════════════════════════ */
+  #avis {
+    padding: var(--spacing-section-mobile) 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    #avis { padding: var(--spacing-section) 40px; }
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  @media (min-width: 768px) {
+    .reviews-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .review-card {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 36px 32px;
+    box-shadow: 0 4px 24px rgba(61,44,58,0.07);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 36px rgba(61,44,58,0.11);
+  }
+
+  .review-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 18px;
+  }
+  .review-stars span { color: #FFD166; font-size: 1.1rem; }
+
+  .review-text {
+    font-size: 0.97rem;
+    color: #5a4558;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    white-space: pre-line;
+  }
+
+  .review-author-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .review-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .review-author-info strong {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .review-author-info span {
+    font-size: 0.82rem;
+    color: #a08ea0;
+  }
+
+  /* ══════════════════════════════════════
+     GALLERY
+  ══════════════════════════════════════ */
+  #galerie {
+    padding: var(--spacing-section-mobile) 24px;
+    background: linear-gradient(135deg, rgba(183,156,237,0.07) 0%, rgba(247,168,160,0.07) 100%);
+  }
+
+  @media (min-width: 768px) {
+    #galerie { padding: var(--spacing-section) 40px; }
+  }
+
+  .gallery-inner { max-width: 1100px; margin: 0 auto; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 260px 200px;
+      gap: 20px;
+    }
+  }
+
+  .gallery-item {
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(61,44,58,0.1);
+    transition: transform 0.35s, box-shadow 0.35s;
+  }
+  .gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 36px rgba(61,44,58,0.16);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .gallery-item:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+    .gallery-item:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .gallery-item:nth-child(3) {
+      grid-column: 3;
+      grid-row: 1;
+    }
+  }
+
+  .gallery-item-mobile-full {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: 768px) {
+    .gallery-item-mobile-full { grid-column: auto; }
+  }
+
+  .gallery-cta-wrap { text-align: center; }
+
+  /* ══════════════════════════════════════
+     HOURS & LOCATION
+  ══════════════════════════════════════ */
+  #horaires {
+    padding: var(--spacing-section-mobile) 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    #horaires { padding: var(--spacing-section) 40px; }
+  }
+
+  .hours-location-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .hours-location-grid { grid-template-columns: 1fr 1fr; gap: 56px; }
+  }
+
+  .hours-card, .location-card {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 36px 32px;
+    box-shadow: 0 4px 24px rgba(61,44,58,0.07);
+  }
+
+  .hours-card h3, .location-card h3 {
+    font-size: 1.3rem;
+    color: var(--text);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hours-table { width: 100%; border-collapse: collapse; }
+  .hours-table tr { border-bottom: 1px solid rgba(61,44,58,0.06); }
+  .hours-table tr:last-child { border-bottom: none; }
+  .hours-table td {
+    padding: 11px 0;
+    font-size: 0.95rem;
+    color: #5a4558;
+  }
+  .hours-table td:first-child { font-weight: 700; color: var(--text); }
+  .hours-table td:last-child { text-align: right; }
+
+  .location-address {
+    font-size: 0.97rem;
+    color: #5a4558;
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  .location-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .map-embed {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(61,44,58,0.1);
+    margin-top: 8px;
+  }
+
+  .map-embed iframe {
+    width: 100%;
+    height: 220px;
+    border: none;
+    display: block;
+  }
+
+  /* ══════════════════════════════════════
+     CONTACT FORM
+  ══════════════════════════════════════ */
+  #contact {
+    padding: var(--spacing-section-mobile) 24px;
+    background: linear-gradient(135deg, rgba(247,168,160,0.1) 0%, rgba(183,156,237,0.1) 100%);
+  }
+
+  @media (min-width: 768px) {
+    #contact { padding: var(--spacing-section) 40px; }
+  }
+
+  .contact-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 48px 40px;
+    box-shadow: 0 8px 40px rgba(61,44,58,0.09);
+  }
+
+  @media (max-width: 600px) {
+    .contact-form { padding: 32px 24px; }
+  }
+
+  .form-group {
+    margin-bottom: 22px;
+  }
+
+  .form-group label {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid rgba(61,44,58,0.1);
+    border-radius: 16px;
+    font-family: var(--font-body);
+    font-size: 0.97rem;
+    color: var(--text);
+    background: var(--background);
+    transition: border-color 0.25s, box-shadow 0.25s;
+    outline: none;
+    resize: vertical;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(183,156,237,0.15);
+  }
+
+  .form-group textarea { min-height: 130px; }
+
+  .form-submit { width: 100%; font-size: 1.05rem; padding: 16px; }
+
+  /* ══════════════════════════════════════
+     TRUST SIGNALS
+  ══════════════════════════════════════ */
+  #trust {
+    padding: var(--spacing-section-mobile) 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    #trust { padding: var(--spacing-section) 40px; }
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .trust-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .trust-card {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(61,44,58,0.07);
+    transition: transform 0.3s;
+  }
+  .trust-card:hover { transform: translateY(-4px); }
+
+  .trust-icon {
+    font-size: 2rem;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .trust-card p {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  /* ══════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════ */
+  footer {
+    background: var(--text);
+    color: rgba(255,255,255,0.85);
+    padding: 56px 24px 32px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .footer-top { grid-template-columns: 2fr 1fr 1fr; }
+  }
+
+  .footer-brand h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .footer-brand h3 span { color: var(--primary); }
+
+  .footer-brand p {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.7);
+    max-width: 320px;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+  }
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.7);
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--primary); }
+
+  .footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 24px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.45);
+  }
+
+  @media (min-width: 768px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  /* ══════════════════════════════════════
+     SCROLL TO TOP
+  ══════════════════════════════════════ */
+  #scrollTop {
+    position: fixed;
+    bottom: 28px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--cta);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(91,200,168,0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 999;
+  }
+  #scrollTop.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #scrollTop:hover { transform: translateY(-3px); }
+</style>
+</head>
+<body>
+
+<!-- ══ NAVIGATION ══ -->
+<nav aria-label="Main navigation">
+  <a href="#hero" class="nav-logo">BABA <span>BS</span> Salon</a>
+  <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu" role="list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#avis">Reviews</a></li>
+    <li><a href="#galerie">Gallery</a></li>
+    <li><a href="#horaires">Hours</a></li>
+    <li><a href="#contact" class="cta" aria-label="Book an appointment">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero" aria-label="Hero section">
+  <div class="hero-bg" role="img" aria-label="BABA BS Unisex SALON interior"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <div class="hero-badge">
+      <span class="stars">★★★★★</span>
+      <span>4.8 Stars · 320+ Happy Clients</span>
+    </div>
+    <h1>BABA BS Unisex SALON</h1>
+    <p class="hero-sub">Barber Shop, Beauty Salon &amp; Hairdresser in Jamia Nagar, New Delhi</p>
+    <p class="hero-text">Welcome to BABA BS Unisex SALON — your trusted destination for haircuts, hair colouring, and beauty services in Abul Fazal Enclave, Jamia Nagar, New Delhi. Rated 4.8 stars by 320+ happy clients, we're open every day from 10:00 AM to 10:00 PM.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="cta" aria-label="Book an appointment at BABA BS Unisex SALON">Book Now</a>
+      <a href="tel:+919899596045" class="cta-outline" aria-label="Call BABA BS Unisex SALON">Call +91 98995 96045</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" aria-label="About BABA BS Unisex SALON">
+  <div class="about-inner fade-in" style="max-width:1100px;margin:0 auto;padding:var(--spacing-section-mobile) 24px;display:grid;grid-template-columns:1fr;gap:48px;align-items:center;">
+    <div class="about-image-wrap">
+      <img src="assets/gallery-1.jpg" alt="Inside BABA BS Unisex SALON — friendly and welcoming atmosphere" loading="lazy">
+      <div class="about-rating-pill">
+        <span class="stars">★★★★★</span>
+        <span>4.8 · 320+ Reviews</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="section-label">About Us</span>
+      <h2 class="section-heading">About BABA BS Unisex SALON</h2>
+      <p>At BABA BS Unisex SALON, we believe great hair is about more than a good cut — it's about being heard. Our team takes the time to understand exactly what you're looking for, whether it's a fresh haircut, a bold new hair colour, or a complete beauty refresh.</p>
+      <p>Located on Main Road, near Gym Box, in K Block, Abul Fazal Enclave Part 1, Jamia Nagar, Okhla, New Delhi, our salon welcomes everyone — men, women, and families alike. With a 4.8-star rating from over 320 reviews, our clients keep coming back for consistent quality, patient service, and attention to detail.</p>
+      <div class="about-chips">
+        <span class="chip">Barber Shop</span>
+        <span class="chip">Beauty Salon</span>
+        <span class="chip">Hairdresser</span>
+        <span class="chip">Open 7 Days</span>
+        <span class="chip">Walk-ins Welcome</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services" aria-label="Our services">
+  <div class="services-inner">
+    <div class="text-center fade-in">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-heading">Our Services</h2>
+      <p class="section-subtext">From precision haircuts to expert hair colouring and beauty services, BABA BS Unisex SALON offers a full range of barber shop, beauty salon, and hairdressing services for all.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">✂️</div>
+        <h3>Expert Haircuts for Men &amp; Women</h3>
+        <p>Precision cuts tailored to your face shape and personal style, delivered by experienced stylists who listen carefully to your needs.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🪒</div>
+        <h3>Beard Grooming &amp; Styling</h3>
+        <p>Professional beard trims, shaping, and styling to keep your look sharp and well-groomed every time you visit.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🎨</div>
+        <h3>Hair Colouring &amp; Highlights</h3>
+        <p>From subtle highlights to bold transformations, our colourists bring your vision to life with professional-grade products and techniques.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">💄</div>
+        <h3>Bridal &amp; Party Makeup</h3>
+        <p>Look your absolute best on your special day with our bridal and party makeup services, crafted to complement your unique beauty.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🌿</div>
+        <h3>Relaxing Facial &amp; Skin Care</h3>
+        <p>Rejuvenate your skin with our calming facial and skin care treatments, designed to leave you feeling refreshed and glowing.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">💅</div>
+        <h3>Manicure &amp; Pedicure Services</h3>
+        <p>Treat your hands and feet to a professional manicure and pedicure experience in a clean, relaxing salon environment.</p>
+      </div>
+    </div>
+    <div class="services-cta-wrap fade-in">
+      <a href="tel:+919899596045" class="cta" aria-label="Call us to book a service">Call +91 98995 96045</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CUSTOMER REVIEWS ══ -->
+<section id="avis" aria-label="Customer reviews">
+  <div class="text-center fade-in">
+    <span class="section-label">Client Stories</span>
+    <h2 class="section-heading">What Our Clients Say</h2>
+    <p class="section-subtext">Real words from real clients — here's what people are saying about their experience at BABA BS Unisex SALON.</p>
+  </div>
+  <div class="reviews-grid fade-in">
+    <div class="review-card">
+      <div class="review-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <p class="review-text">"I had a wonderful experience getting my hair coloured! I went in with a certain expectation, but the final result was even better than I had imagined.
+
+The time, effort, and attention to detail that Anas Bhai put in are truly commendable. He has a great understanding of hair colouring techniques and, more importantly, he is patient, attentive, and a really good listener. He understood exactly what I was looking for and brought it to life beautifully.
+
+Thank you, Anas Bhai, for the wonderful experience and for making my hair look even better than I expected! 😊"</p>
+      <div class="review-author-row">
+        <div class="review-avatar" aria-hidden="true">F</div>
+        <div class="review-author-info">
+          <strong>Faiza Khan</strong>
+          <span>In the last week · ★★★★★</span>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <p class="review-text">"If you want a perfect haircut, this is your place. I've been his client for over 15 years now. Even though I live in Dwarka, Delhi, I make it a point to come to him because his work is unmatched. He's consistent, listens well, and gives a fabulous haircut every time. Truly a gem. Thank you for 15+ years of great hair!"</p>
+      <div class="review-author-row">
+        <div class="review-avatar" aria-hidden="true">B</div>
+        <div class="review-author-info">
+          <strong>Bhakti Sachidanand Productions</strong>
+          <span>3 weeks ago · ★★★★★</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY ══ -->
+<section id="galerie" aria-label="Gallery preview">
+  <div class="gallery-inner">
+    <div class="text-center fade-in">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-heading">Gallery</h2>
+      <p class="section-subtext">Take a look inside BABA BS Unisex SALON and see the styles our clients love. Visit us in person at K Block, Abul Fazal Enclave Part 1, Jamia Nagar, New Delhi to experience it for yourself.</p>
+    </div>
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item gallery-item-mobile-full">
+        <img src="assets/hero.jpg" alt="BABA BS Unisex SALON — salon interior and styling" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/gallery-1.jpg" alt="Haircut and styling at BABA BS Unisex SALON" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/gallery-2.jpg" alt="Hair colouring and beauty services at BABA BS Unisex SALON" loading="lazy">
+      </div>
+    </div>
+    <div class="gallery-cta-wrap fade-in">
+      <a href="#contact" class="cta" aria-label="Book an appointment to visit us">Book an Appointment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOURS & LOCATION ══ -->
+<section id="horaires" aria-label="Hours and location">
+  <div class="text-center fade-in">
+    <span class="section-label">Find Us</span>
+    <h2 class="section-heading">Hours &amp; Location</h2>
+    <p class="section-subtext">We're open every day of the week from 10:00 AM to 10:00 PM. Find us on Main Road, near Gym Box, in K Block, Abul Fazal Enclave Part 1, Jamia Nagar, Okhla, New Delhi 110025.</p>
+  </div>
+  <div class="hours-location-grid fade-in">
+    <div class="hours-card">
+      <h3>🕙 Opening Hours</h3>
+      <table class="hours-table" aria-label="Opening hours">
+        <tbody>
+          <tr><td>Monday</td><td>10:00 AM – 10:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>10:00 AM – 10:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>10:00 AM – 10:00 PM</td></tr>
+          <tr><td>Thursday</td><td>10:00 AM – 10:00 PM</td></tr>
+          <tr><td>Friday</td><td>10:00 AM – 10:00 PM</td></tr>
+          <tr><td>Saturday</td><td>10:00 AM – 10:00 PM</td></tr>
+          <tr><td>Sunday</td><td>10:00 AM – 10:00 PM</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="location-card">
+      <h3>📍 Our Address</h3>
+      <p class="location-address">Thokar.5, K Block, K-69, Main Road, near Gym Box, Part 1 Abul Fazal Enclave, Block J, Jamia Nagar, Okhla, New Delhi, Delhi 110025, India.</p>
+      <a href="tel:+919899596045" class="location-phone" aria-label="Call BABA BS Unisex SALON">📞 +91 98995 96045</a>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps?q=28.5594,77.2850&z=16&output=embed"
+          title="BABA BS Unisex SALON location map"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Google Maps showing BABA BS Unisex SALON location in Jamia Nagar, New Delhi">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT FORM ══ -->
+<section id="contact" aria-label="Contact and booking form">
+  <div class="contact-inner">
+    <div class="text-center fade-in">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-heading">Get in Touch</h2>
+      <p class="section-subtext">Have a question or want to book an appointment? Call us directly at +91 98995 96045 — we're happy to help.</p>
+    </div>
+    <div class="contact-form fade-in">
+      <form action="https://checkout.kamkod.com/contact" method="POST" aria-label="Contact form for BABA BS Unisex SALON">
+        <input type="hidden" name="lead_id" value="ChIJ74j7ipLlDDkRuaRM2uBMK1s">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what service you're interested in or ask us anything." required aria-required="true"></textarea>
+        </div>
+        <button type="submit" class="cta form-submit" aria-label="Send your message to BABA BS Unisex SALON">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST SIGNALS ══ -->
+<section id="trust" aria-label="Why choose BABA BS Unisex SALON">
+  <div class="text-center fade-in">
+    <span class="section-label">Our Promise</span>
+    <h2 class="section-heading">Why Choose BABA BS Unisex SALON</h2>
+    <p class="section-subtext">We're committed to delivering a consistently excellent experience every time you visit us in Jamia Nagar, New Delhi.</p>
+  </div>
+  <div class="trust-grid fade-in">
+    <div class="trust-card">
+      <span class="trust-icon">⭐</span>
+      <p>4.8-star rating from 320+ reviews.</p>
+    </div>
+    <div class="trust-card">
+      <span class="trust-icon">🕙</span>
+      <p>Open 7 days a week, 10:00 AM – 10:00 PM.</p>
+    </div>
+    <div class="trust-card">
+      <span class="trust-icon">🚶</span>
+      <p>Walk-ins welcome — no appointment needed.</p>
+    </div>
+    <div class="trust-card">
+      <span class="trust-icon">✂️</span>
+      <p>Experienced stylists for men, women, and families.</p>
+    </div>
+    <div class="trust-card">
+      <span class="trust-icon">🧴</span>
+      <p>Professional hair care products used in every service.</p>
+    </div>
+    <div class="trust-card">
+      <span class="trust-icon">🧼</span>
+      <p>Clean and hygienic environment maintained at all times.</p>
+    </div>
+    <div class="trust-card">
+      <span class="trust-icon">💳</span>
+      <p>Card payments accepted for your convenience.</p>
+    </div>
+    <div class="trust-card">
+      <span class="trust-icon">📍</span>
+      <p>Conveniently located in Jamia Nagar, New Delhi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer aria-label="Site footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>BABA <span>BS</span> Unisex SALON</h3>
+        <p>BABA BS Unisex SALON — Barber Shop, Beauty Salon &amp; Hairdresser in Jamia Nagar, New Delhi. Open daily 10:00 AM – 10:00 PM. Call +91 98995 96045.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#avis">Reviews</a></li>
+          <li><a href="#galerie">Gallery</a></li>
+          <li><a href="#horaires">Hours &amp; Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919899596045">+91 98995 96045</a></li>
+          <li>Thokar.5, K Block, K-69, Main Road, near Gym Box, Abul Fazal Enclave Part 1, Jamia Nagar, Okhla, New Delhi, Delhi 110025, India.</li>
+          <li>Open daily: 10:00 AM – 10:00 PM.</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>© 2025 BABA BS Unisex SALON. All rights reserved.</span>
+      <span>Barber Shop · Beauty Salon · Hairdresser · Jamia Nagar, New Delhi.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ SCROLL TO TOP ══ -->
+<button id="scrollTop" aria-label="Scroll back to top">↑</button>
+
+<script>
+  // ── BURGER MENU ──
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+
+  burger.addEventListener('click', function () {
+    const isOpen = navMenu.classList.toggle('open');
+    burger.classList.toggle('active', isOpen);
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Close menu when a nav link is clicked
+  navMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navMenu.classList.remove('open');
+      burger.classList.remove('active');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ── FADE-IN ON SCROLL ──
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(function (el) { observer.observe(el); });
+
+  // ── SCROLL TO TOP ──
+  const scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+  scrollTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── ABOUT SECTION RESPONSIVE GRID ──
+  function updateAboutGrid() {
+    const aboutInner = document.querySelector('#about .about-inner');
+    if (!aboutInner) return;
+    if (window.innerWidth >= 768) {
+      aboutInner.style.gridTemplateColumns = '1fr 1fr';
+      aboutInner.style.gap = '64px';
+      aboutInner.style.padding = 'var(--spacing-section) 40px';
+    } else {
+      aboutInner.style.gridTemplateColumns = '1fr';
+      aboutInner.style.gap = '48px';
+      aboutInner.style.padding = 'var(--spacing-section-mobile) 24px';
+    }
+  }
+  updateAboutGrid();
+  window.addEventListener('resize', updateAboutGrid);
+</script>
+<!-- KAMKOD:DEMO_START -->
+<script>
+(function(){
+  var URL = 'https://checkout.kamkod.com/?lead=ChIJ74j7ipLlDDkRuaRM2uBMK1s';
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button, [role="button"]');
+    if(!el || el.closest('form')) return;               /* formulaire -> endpoint contact */
+    if(el.classList.contains('cta')) { e.preventDefault(); window.location.href = URL; return; }
+    if(el.closest('header nav, nav')) return;           /* navigation interne de la démo */
+    var a = e.target.closest('a');
+    if(!a) return;                                      /* bouton seul hors nav: on laisse */
+    var href = a.getAttribute('href') || '';
+    if(href.charAt(0) === '#') return;                  /* ancres de section */
+    if(/^https?:|^\/\//i.test(href)) return;          /* lien externe réel */
+    e.preventDefault(); window.location.href = URL;     /* tel:, mailto:, javascript:… */
+  }, true);
+})();
+</script>
+<div id="kamkod-demo-banner" style="position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  This is a preview of your future website — <a href="https://checkout.kamkod.com/?lead=ChIJ74j7ipLlDDkRuaRM2uBMK1s" style="color:#FFD700;font-weight:600;">activate it now</a>
+</div>
+<!-- KAMKOD:DEMO_END -->
+</body>
+</html>
